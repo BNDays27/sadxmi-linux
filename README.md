@@ -1,2 +1,22 @@
-# sadxmi-linux
-a bash script that makes it easier to use the SADX mod installer on linux
+# SADX Mod installer for Linux
+A bash script that makes it easier to Install the SADX mod installer and use the Sonic Adventure Mod Manager on linux, to use the scipt, please 
+
+## Dependencies
+The scipt requires these dependencies
+```
+yad
+zenity
+protontricks
+```
+### Arch/Arch based distros
+you can install all of these through your AUR helper or manually
+```
+sudo pacman -S protontricks yad zenity
+yay -S protontricks-git
+```
+
+# Installation
+```
+git clone https://github.com/BNDays27/sadxmi-linux
+cd sadxmi-linux
+./setup-linux.sh

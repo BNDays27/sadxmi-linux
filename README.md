@@ -1,5 +1,5 @@
 # SADX Mod installer for Linux
-A bash script that makes it easier to Install the SADX mod installer and use the Sonic Adventure Mod Manager on linux, to use the scipt, please 
+A bash script that makes it easier to Install the SADX mod installer and use the Sonic Adventure Mod Manager on Linux
 
 ## Dependencies
 The scipt requires these dependencies

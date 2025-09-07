@@ -15,10 +15,6 @@ fi
 # this is the actual installer
 echo "entering setup"
 zenity --width=750 --height=100 --info --title="$name Installation" --text="Please select the directory where Sonic Adventure DX is installed"
-#if [ $? -eq 0 ]; then
-#  echo "Script exited by user"
-#  exit 0
-#fi
 
 selected_folder=$(zenity --file-selection --directory --title "select the directory where Sonic Adventure DX is installed")
 

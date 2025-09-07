@@ -11,12 +11,6 @@ then
     exit 0
 fi
 
-if ! command -v yad &> /dev/null
-then
-    echo "YAD isn't installed, please install that through your distro's package manager"
-    exit 0
-fi
-
 if ! command -v curl &> /dev/null
 then
     echo "curl isn't installed, please install that through your distro's package manager"
@@ -31,11 +25,7 @@ fi
 
 # this is the actual installer
 echo "Entering setup"
-yad --width=750 --height=100 --info --title="$name Installation" --window-icon="$icon_path" --image="$icon_path" --text="Please select the directory where Sonic Adventure DX is installed" --button="OK:1" --button="Cancel:0"
-  if [ $? -eq 0 ]; then
-  echo "Script exited by user"
-  exit 0
-fi
+zenity --width=750 --height=100 --info --title="$name Installation" --text="Please select the directory where Sonic Adventure DX is installed"
 
 selected_folder=$(zenity --file-selection --directory --title "select the directory where Sonic Adventure DX is installed")
 

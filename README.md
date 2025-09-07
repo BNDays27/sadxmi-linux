@@ -1,5 +1,4 @@
 <h1>
-	<a href="#-------------------sa-mod-manager">
 	<img width="48" align="left" src="https://github.com/BNDays27/sadxmi-linux/blob/main/samm.png?raw=true">
 	</a>
 	SADX Mod installer for Linux

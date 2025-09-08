@@ -1,0 +1,10 @@
+[Desktop Entry]
+GenericName=A new mod manager for the Sonic Adventure games.
+Icon=samm
+Keywords=hedgehog;mod;loader;manager;sonic
+Categories=Game;
+Type=Application
+MimeType=x-scheme-handler/sadxmm;x-scheme-handler/sa2mm
+Name=Sonic Adventure Mod Manager
+StartupNotify=true
+Terminal=false

@@ -1,6 +1,7 @@
 #!/bin/sh
 name="SADX Mod Installer"
-icon_path="./samm.png"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+icon_path="$SCRIPT_DIR/samm.png"
 desktop_files=${XDG_DATA_HOME:-$HOME/.local/share}/applications
 icon_files=${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/256x256/apps
 
@@ -47,21 +48,14 @@ fi
 
 
  else
-    echo "SADX Mod Manager hasn' been installed"
+    echo "SADX Mod Manager hasn't been installed"
     exit 0
  fi
 
-# makes the .desktop entry for 1-click installs and easy opening in whatever application launcher you have
-echo "[Desktop Entry]
-Exec=protontricks-launch --appid 71250 '$selected_folder/SAModManager.exe' %u
-GenericName=A new mod manager for the Sonic Adventure games.
-Icon=samm
-Keywords=hedgehog;mod;loader;manager;sonic
-Categories=Game;
-MimeType=x-scheme-handler/sadxmm;x-scheme-handler/sa2mm
-Name=Sonic Adventure Mod Manager
-StartupNotify=true
-Terminal=false">> $desktop_files/samm.desktop
+# For the .desktop entry so you can use 1-click installs and easy opening in whatever application launcher you have
+desktop-file-install --dir="$desktop_files" "$SCRIPT_DIR/samm.desktop"
+echo "Exec=protontricks-launch --appid 71250 '$selected_folder/SAModManager.exe' %U" >> $desktop_files/samm.desktop
+update-desktop-database "$desktop_files"
 
 # Installs the icon file and deletes the installer and other files
 install -Dm644 $icon_path $icon_files/samm.png

@@ -39,8 +39,6 @@ fi
     exit 0
  fi
 
- curl https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.19/windowsdesktop-runtime-8.0.19-win-x64.exe --output "$selected_folder/windowsdesktop-runtime-8.0.19-win-x64.exe"
- flatpak run --command=protontricks-launch com.github.Matoking.protontricks --appid 71250 "$selected_folder/windowsdesktop-runtime-8.0.19-win-x64.exe" /passive
 # makes the .desktop entry for 1-click installs and easy opening in whatever application launcher you have
 desktop-file-install --dir="$desktop_files" "$SCRIPT_DIR/samm.desktop"
 echo "Exec=flatpak run --command=protontricks-launch com.github.Matoking.protontricks --appid 71250 '$selected_folder/SAModManager.exe' %U" >> $desktop_files/samm.desktop

@@ -8,7 +8,7 @@ icon_files=${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/256x256/apps
 # checks to see if all of the dependencies are installed
 if ! command -v protontricks &> /dev/null
 then
-    echo "Protontricks isn't installed, please install that through your distro's package manager or through pipx"
+    echo "Protontricks isn't installed, please install that through your distro's package manager or through pipx. if you're on the flatpak, use the setup-immutable script"
     exit 0
 fi
 

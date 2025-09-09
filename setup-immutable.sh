@@ -7,10 +7,8 @@ icon_files=${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/256x256/apps
 
 appid=com.github.Matoking.protontricks
 if ! flatpak info "$appid" >/dev/null 2>&1; then
-    echo "Protontricks isnt installed, please install the flatpak before continuing"
+    echo "Protontricks isnt installed, please install the flatpak before continuing, if you have the native version, please use the setup-linux script"
     exit 0
-else
-    echo "Protontricks is installed."
 fi
 
 # this is the actual installer

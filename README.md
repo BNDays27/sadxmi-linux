@@ -3,7 +3,13 @@
 	</a>
 	SADX Mod installer for Linux
 </h1>
-A bash script that makes it easier to Install the SADX mod installer and use the Sonic Adventure Mod Manager on Linux
+A Bash script that makes it easier to Install the SADX mod installer and use the Sonic Adventure Mod Manager on Linux
+
+> [!IMPORTANT]
+> The script requires you to have a copy of Sonic Adventure DX [from Steam.](https://store.steampowered.com/app/71250/Sonic_Adventure_DX/), please install it before using the script.
+# Contents
+- [Dependencies](#dependencies)
+- [Installation](#installation)
 
 ## Dependencies
 The scipt requires these dependencies

@@ -12,7 +12,7 @@ A Bash script that makes it easier to Install the SADX mod installer and use the
 - [Installation](#installation)
 
 ## Dependencies
-The scipt requires these dependencies
+both scripts require these dependencies
 ```
 zenity
 protontricks
@@ -27,11 +27,11 @@ paru -S protontricks
 ```
 
 ### Other non-immutable Distros
-[Please refer to this part of the Protontricks GitHub page](https://github.com/Matoking/protontricks?tab=readme-ov-file#pipx) to install protontricks via pipx if you want to, you can install 
+to install protontricks, [Please refer to this part of the Protontricks GitHub page](https://github.com/Matoking/protontricks?tab=readme-ov-file#pipx) to install protontricks via pipx. If you want to, you can install 
 protontricks via flathub and use the `setup-immutable` script instead
 
 ### SteamOS/Bazzite/other immutable distros
-both SteamOS and Bazzite Already provides Zenity, so all you need to install is Protontricks. You can do so by installing it through a software manager that uses Flathub like KDE Discover or by typing this into Konsole
+both SteamOS and Bazzite Already provide Zenity, so all you need to install is Protontricks. You can do so by installing it through a software manager that uses Flathub like KDE Discover or by typing this into Konsole
 ```
 flatpak install flathub com.github.Matoking.protontricks
 ```
@@ -45,8 +45,8 @@ git clone https://github.com/BNDays27/sadxmi-linux
 cd sadxmi-linux
 ./setup-linux.sh
 ```
-### SteamOS/Bazzite/other imuutable Linux distros
-If youve installed Protontricks through the flatpak or are on SteamOS, clone the repo and use the `setup-immutable.sh` script
+### SteamOS/Bazzite/other immutable Linux distros
+If you've installed Protontricks through the flatpak or are on SteamOS, clone the repo and use the `setup-immutable.sh` script
 ```
 git clone https://github.com/BNDays27/sadxmi-linux
 cd sadxmi-linux

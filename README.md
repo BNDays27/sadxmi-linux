@@ -5,25 +5,33 @@
 </h1>
 A Bash script that makes it easier to Install the SADX mod installer and use the Sonic Adventure Mod Manager on Linux
 
-> [!IMPORTANT]
-> The script requires you to have [the Steam version of Sonic Adventure DX installed](https://store.steampowered.com/app/71250/Sonic_Adventure_DX/), if you dont own or it or have it, please purchase or install it before using the script.
 # Contents
 - [Dependencies](#dependencies)
 - [Installation](#installation)
+- [Bugs/Issue Reporting](#bugsissue-reporting)
+> [!IMPORTANT]
+> The script requires you to have the Steam version of [Sonic Adventure DX](https://store.steampowered.com/app/71250/Sonic_Adventure_DX/) or [Sonic Adventure 2](https://store.steampowered.com/app/213610/Sonic_Adventure_2/) installed, if you dont own or it or have it, please purchase or install it before using the script.
 
 ## Dependencies
 both scripts require these dependencies
 ```
 zenity
 protontricks
+unzip
 ```
 ### Arch/Arch based distros
-You can install zenity through the `extra` repo, whilst protontricks is (as of now) only in the AUR, so you will have to install it through your AUR helper or manually from 
+You can install zenity and unzip through the `extra` repo, whilst protontricks is (as of now) only in the AUR, so you will have to install it through your AUR helper or manually from 
 [the AUR website](https://aur.archlinux.org/packages/protontricks)
+```
+sudo pacman -S zenity unzip
+paru -S protontricks-git
+```
+
+### Fedora / Fedora based Distros
+You can install protontricks, unzip zenity directly from DNF                                
 
 ```
-sudo pacman -S zenity
-paru -S protontricks
+sudo dnf install protontricks zenity unzip
 ```
 
 ### Other non-immutable Distros
@@ -52,3 +60,10 @@ git clone https://github.com/BNDays27/sadxmi-linux
 cd sadxmi-linux
 ./setup-immutable.sh
 ```
+If you want to set up mod support for Sonic Adventure 2, please select yes when questioned
+
+## Bugs/Issue Reporting
+If you have any bugs, please go and [report an issue](https://github.com/BNDays27/sadxmi-linux/issues), I'll try and get to you as soon as I can.
+
+# Thanks!
+Thanks for using this, I don't really have much to say but I really do appreciate you using my script. Thanks!

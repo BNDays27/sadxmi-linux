@@ -15,13 +15,14 @@ if ! flatpak info "$appid" >/dev/null 2>&1; then
 }
 
 check_command_exists com.github.Matoking.protontricks
+selector=$(zenity --list --column=Game --column=Description "Sonic Adventure" "Downloads the SADX mod installer and sets up mods" "Sonic Adventure 2" "Downloads the SA Mod Manager and sets up mods" --width 720 --height 100)
 
-# if you want to go to the SADX setup file go to ./flatpak/sadx.sh
-. $SCRIPT_DIR/flatpak/sadx.sh
+if [[ $selector == "Sonic Adventure" ]]; then
+  . $SCRIPT_DIR/flatpak/sadx.sh
 
-zenity --question --title "Extras" --text "Do you want to set up mods for the steam version of Sonic Adventure 2" --icon $icon_path
+elif [[ $selector == "Sonic Adventure 2" ]]; then
+  . $SCRIPT_DIR/flatpak/sa2.sh
 
-# if you want to go to the SA2/2B setup file go to ./linux/sa2.sh
-if [[ $? == 0 ]]; then
-. $SCRIPT_DIR/flatpak/sa2.sh
+else
+  exit 0
 fi

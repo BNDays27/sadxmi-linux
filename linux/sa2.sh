@@ -15,7 +15,7 @@ curl -JLo "$sa2_selected_folder/samm.zip" https://github.com/X-Hax/SA-Mod-Manage
 unzip "$sa2_selected_folder/samm.zip" -d "$sa2_selected_folder"
 protontricks-launch --appid 213610 "$sa2_selected_folder/SAModManager.exe"
 
-if [ -f "$desktop_files/samm.desktop" ]; then
+if [ ! -f "$desktop_files/samm.desktop" ]; then
    desktop-file-install --dir="$desktop_files" "$SCRIPT_DIR/samm.desktop"
    echo "Exec=protontricks-launch --appid 213610 '$sa2_selected_folder/SAModManager.exe' %U" >> "$desktop_files/samm.desktop"
    update-desktop-database "$desktop_files"

@@ -24,7 +24,7 @@ protontricks-launch --appid 71250 "$selected_folder/sadx_setup.exe"
  fi
 
 # For the .desktop entry so you can use 1-click installs and easy opening in whatever application launcher you have
-if [ -f "$desktop_files/samm.desktop" ]; then
+if [ ! -f "$desktop_files/samm.desktop" ]; then
    desktop-file-install --dir="$desktop_files" "$SCRIPT_DIR/samm.desktop"
    echo "Exec=protontricks-launch --appid 71250 '$selected_folder/SAModManager.exe' %U" >> $desktop_files/samm.desktop
    update-desktop-database "$desktop_files"

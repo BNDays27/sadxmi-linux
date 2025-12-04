@@ -18,12 +18,14 @@ check_command_exists protontricks
 check_command_exists curl
 check_command_exists zenity
 check_command_exists unzip
-selector=$(zenity --list --column=Game --column=Description "Sonic Adventure" "Downloads the SADX mod installer and sets up mods" "Sonic Adventure 2" "Downloads the SA Mod Manager and sets up mods" --width 720 --height 100)
+selector=$(zenity --list --column=Game --column=Description --title "Select a Game" "Sonic Adventure DX" "Downloads the SADX mod installer for Sonic Adventure DX" "Sonic Adventure 2" "Adds mod support for Sonic Adventure 2" --width 720 --height 100)
 
-if [[ $selector == "Sonic Adventure" ]]; then
+echo "$selector selected"
+
+if [[ $selector = "Sonic Adventure DX" ]]; then
   . $SCRIPT_DIR/linux/sadx.sh
 
-elif [[ $selector == "Sonic Adventure 2" ]]; then
+elif [[ $selector = "Sonic Adventure 2" ]]; then
   . $SCRIPT_DIR/linux/sa2.sh
 
 else

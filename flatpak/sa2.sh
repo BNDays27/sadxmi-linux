@@ -18,7 +18,7 @@ unzip "$sa2_selected_folder/samm.zip" -d "$sa2_selected_folder"
 flatpak run --command=protontricks-launch com.github.Matoking.protontricks --appid 213610 "$sa2_selected_folder/SAModManager.exe"
 
 #  makes samm.desktop if it doesnt exist already for whatever reason
-if [ -f "$desktop_files/samm.desktop" ]; then
+if [ ! -f "$desktop_files/samm.desktop" ]; then
    desktop-file-install --dir="$desktop_files" "$SCRIPT_DIR/samm.desktop"
    echo "Exec=protontricks-launch --appid 213610 '$sa2_selected_folder/SAModManager.exe' %U" >> "$desktop_files/samm.desktop"
    update-desktop-database "$desktop_files"

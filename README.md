@@ -60,8 +60,6 @@ git clone https://github.com/BNDays27/sadxmi-linux
 cd sadxmi-linux
 ./setup-immutable.sh
 ```
-If you want to set up mod support for Sonic Adventure 2, please select yes when questioned
-
 ## Bugs/Issue Reporting
 If you have any bugs, please go and [report an issue](https://github.com/BNDays27/sadxmi-linux/issues), I'll try and get to you as soon as I can.
 

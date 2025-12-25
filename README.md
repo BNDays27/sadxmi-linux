@@ -39,7 +39,7 @@ to install protontricks, [Please refer to this part of the Protontricks GitHub p
 protontricks via flathub and use the `setup-immutable` script instead
 
 ### SteamOS/Bazzite/other immutable distros
-both SteamOS and Bazzite Already provide Zenity, so all you need to install is Protontricks. You can do so by installing it through a software manager that uses Flathub like KDE Discover or by typing this into Konsole
+both SteamOS and Bazzite Already provide Zenity, so all you need to install is Protontricks. You can do so by installing it through a software manager that uses Flathub like KDE Discover or by typing this into your terminal of choice
 ```
 flatpak install flathub com.github.Matoking.protontricks
 ```

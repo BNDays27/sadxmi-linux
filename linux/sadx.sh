@@ -1,5 +1,8 @@
 #!/bin/sh
 echo "Entering setup"
+
+selected_installer=$(zenity --list --column=Game --column=Description --title "What installer do you want to use?" "Offline Installer" "Takes longer to install, but it could fix some issues" "Online Installer" "Takes less time to install, but could have some issues with downloads" --width 720 --height 100)
+
 selected_folder=$(zenity --file-selection --directory --title "select the directory where Sonic Adventure DX is installed")
 
 if [ -f "$selected_folder/Sonic Adventure DX.exe" ]; then
@@ -9,8 +12,18 @@ else
    exit 0
 fi
 
+if [[ $selected_installer = "Offline Installer" ]]; then
+  curl -JLo "$selected_folder/sadx_setup_full.zip" https://dcmods.unreliable.network/owncloud/data/PiKeyAr/files/Setup/offline/sadx_setup_full.zip
+  unzip "$selected_folder/sadx_setup_full.zip" -d "$selected_folder"
+  rm "$selected_folder/sadx_setup_full.zip" 
+
+elif [[ $selected_installer = "Online Installer" ]]; then
+  curl https://dcmods.unreliable.network/owncloud/data/PiKeyAr/files/Setup/sadx_setup.exe --output "$selected_folder/sadx_setup.exe"
+else
+  exit 0
+fi
+
 # Downloads and launches the SADX mod installer, the rest of it should be handled by that
-curl https://dcmods.unreliable.network/owncloud/data/PiKeyAr/files/Setup/sadx_setup.exe --output "$selected_folder/sadx_setup.exe"
 protontricks-launch --appid 71250 "$selected_folder/sadx_setup.exe"
  
  # Checks if the mod manager was installed

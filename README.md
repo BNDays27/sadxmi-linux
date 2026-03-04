@@ -22,15 +22,15 @@ protontricks
 unzip
 ```
 
-### Arch / EndeavourOS / CachyOS / Other Arch based distros
+### Arch / EndeavourOS / CachyOS / Other Arch based Distros
 You can install all of the dependencies through the `extra` repo using `pacman`
-```
+``` sh
 sudo pacman -S zenity unzip protontricks
 ```
 
 ### Fedora / Fedora based Distros
 You can install Protontricks, unzip zenity directly from `dnf`
-```
+``` sh
 sudo dnf install protontricks zenity unzip
 ```
 
@@ -39,7 +39,7 @@ To install Protontricks, [Please refer to this part of the Protontricks GitHub p
 
 ### SteamOS / Bazzite / other immutable Distros
 Both SteamOS and Bazzite Already provide Zenity and unzip by default, so all you need to install is Protontricks. You can do so by installing it through [Flathub](https://flathub.org/en/apps/com.github.Matoking.protontricks) with a software manager like KDE Discover or Bazaar, or by typing this into your terminal of choice
-```
+``` sh
 flatpak install flathub com.github.Matoking.protontricks
 ```
 
@@ -47,7 +47,7 @@ flatpak install flathub com.github.Matoking.protontricks
 
 ### non-immutable Linux Distros
 If you've installed Protontricks natively or through pip/pipx, clone the repo and use the `setup-linux.sh` script
-```
+``` sh
 git clone https://github.com/BNDays27/salms
 cd salms
 ./setup-linux.sh
@@ -55,7 +55,7 @@ cd salms
 
 ### SteamOS/Bazzite/other immutable Linux distros
 If you've installed Protontricks through the Flatpak or are on SteamOS, clone the repo and use the `setup-immutable.sh` script
-```
+``` sh
 git clone https://github.com/BNDays27/salms
 cd salms
 ./setup-immutable.sh
@@ -65,11 +65,9 @@ cd salms
 If you have any bugs, please go and report an issue [in the issues section of the repo](https://github.com/BNDays27/salms/issues), I'll try and get to you as soon as I can, I am only human after all
 
 ### Thanks!
-All of the contributors to the [Sonic Adventure Mod Manager](https://github.com/X-Hax/SA-Mod-Manager/graphs/contributors)
-
-[PkR](https://gitlab.com/PiKeyAr): for creating the [SADX Mod Installer](https://gitlab.com/PiKeyAr/sadx-mod-installer/-/wikis/home)
-
-The authors of the mods featured [in the installer](https://gitlab.com/PiKeyAr/sadx-mod-installer/-/wikis/home)
+- All of the contributors to the [Sonic Adventure Mod Manager](https://github.com/X-Hax/SA-Mod-Manager/graphs/contributors)
+- [PkR](https://gitlab.com/PiKeyAr): for creating the [SADX Mod Installer](https://gitlab.com/PiKeyAr/sadx-mod-installer/-/wikis/home)
+- The authors of the mods featured [in the installer](https://gitlab.com/PiKeyAr/sadx-mod-installer/-/wikis/home)
 
 I **really** couldn't do this without any of these exiting, so you should give them some love, they deserve it
 
